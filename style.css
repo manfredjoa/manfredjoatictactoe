@@ -90,13 +90,3 @@ button {
   bottom: 40px;
   font-size: 100px;
 }
-
-#redWins,
-#redPlayer {
-  color: rgb(100, 0, 0)
-}
-
-#blueWins,
-#bluePlayer {
-  color: rgb(0, 0, 100)
-}
