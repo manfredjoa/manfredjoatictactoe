@@ -48,6 +48,7 @@ const redWins = document.querySelector("#redWins")
 const blueWins = document.querySelector("#blueWins")
 const tie = document.querySelector("#tie")
 const gameEnd = document.querySelector("#gameEnd")
+const playAgain = document.querySelector("#playAgain")
 let redScoreCount = 0
 let blueScoreCount = 0
 
@@ -59,6 +60,7 @@ function check() {
     redScore.innerText = redScoreCount += 1
     redWins.classList.remove("hidden")
     gameEnd.classList.add("gameEnd")
+    playAgain.classList.remove("hidden")
 
   } else if (red.includes('3') && red.includes('4') && red.includes('5')) {
     console.log("Red wins!")
@@ -66,6 +68,7 @@ function check() {
     redScore.innerText = redScoreCount += 1
     redWins.classList.remove("hidden")
     gameEnd.classList.add("gameEnd")
+    playAgain.classList.remove("hidden")
 
   } else if (red.includes('6') && red.includes('7') && red.includes('8')) {
     console.log("Red wins!")
@@ -73,6 +76,7 @@ function check() {
     redScore.innerText = redScoreCount += 1
     redWins.classList.remove("hidden")
     gameEnd.classList.add("gameEnd")
+    playAgain.classList.remove("hidden")
 
   } else if (red.includes('0') && red.includes('3') && red.includes('6')) {
     console.log("Red wins!")
@@ -80,6 +84,7 @@ function check() {
     redScore.innerText = redScoreCount += 1
     redWins.classList.remove("hidden")
     gameEnd.classList.add("gameEnd")
+    playAgain.classList.remove("hidden")
 
   } else if (red.includes('1') && red.includes('4') && red.includes('7')) {
     console.log("Red wins!")
@@ -87,6 +92,7 @@ function check() {
     redScore.innerText = redScoreCount += 1
     redWins.classList.remove("hidden")
     gameEnd.classList.add("gameEnd")
+    playAgain.classList.remove("hidden")
 
   } else if (red.includes('2') && red.includes('5') && red.includes('8')) {
     console.log("Red wins!")
@@ -94,6 +100,7 @@ function check() {
     redScore.innerText = redScoreCount += 1
     redWins.classList.remove("hidden")
     gameEnd.classList.add("gameEnd")
+    playAgain.classList.remove("hidden")
 
   } else if (red.includes('0') && red.includes('4') && red.includes('8')) {
     console.log("Red wins!")
@@ -101,6 +108,7 @@ function check() {
     redScore.innerText = redScoreCount += 1
     redWins.classList.remove("hidden")
     gameEnd.classList.add("gameEnd")
+    playAgain.classList.remove("hidden")
 
   } else if (red.includes('2') && red.includes('4') && red.includes('6')) {
     console.log("Red wins!")
@@ -108,12 +116,14 @@ function check() {
     redScore.innerText = redScoreCount += 1
     redWins.classList.remove("hidden")
     gameEnd.classList.add("gameEnd")
+    playAgain.classList.remove("hidden")
 
   } else if (red.length === 5 && blue.length === 4) {
     console.log("It's a tie!")
     win++
     tie.classList.remove("hidden")
     gameEnd.classList.add("gameEnd")
+    playAgain.classList.remove("hidden")
 
 
   } else if (blue.includes('0') && blue.includes('1') && blue.includes('2')) {
@@ -122,6 +132,7 @@ function check() {
     blueScore.innerText = blueScoreCount += 1
     blueWins.classList.remove("hidden")
     gameEnd.classList.add("gameEnd")
+    playAgain.classList.remove("hidden")
 
   } else if (blue.includes('3') && blue.includes('4') && blue.includes('5')) {
     console.log("Blue wins!")
@@ -129,6 +140,7 @@ function check() {
     blueScore.innerText = blueScoreCount += 1
     blueWins.classList.remove("hidden")
     gameEnd.classList.add("gameEnd")
+    playAgain.classList.remove("hidden")
 
   } else if (blue.includes('6') && blue.includes('7') && blue.includes('8')) {
     console.log("Blue wins!")
@@ -136,6 +148,7 @@ function check() {
     blueScore.innerText = blueScoreCount += 1
     blueWins.classList.remove("hidden")
     gameEnd.classList.add("gameEnd")
+    playAgain.classList.remove("hidden")
 
   } else if (blue.includes('0') && blue.includes('3') && blue.includes('6')) {
     console.log("Blue wins!")
@@ -143,6 +156,7 @@ function check() {
     blueScore.innerText = blueScoreCount += 1
     blueWins.classList.remove("hidden")
     gameEnd.classList.add("gameEnd")
+    playAgain.classList.remove("hidden")
 
   } else if (blue.includes('1') && blue.includes('4') && blue.includes('7')) {
     console.log("Blue wins!")
@@ -150,6 +164,7 @@ function check() {
     blueScore.innerText = blueScoreCount += 1
     blueWins.classList.remove("hidden")
     gameEnd.classList.add("gameEnd")
+    playAgain.classList.remove("hidden")
 
   } else if (blue.includes('2') && blue.includes('5') && blue.includes('8')) {
     console.log("Blue wins!")
@@ -157,6 +172,7 @@ function check() {
     blueScore.innerText = blueScoreCount += 1
     blueWins.classList.remove("hidden")
     gameEnd.classList.add("gameEnd")
+    playAgain.classList.remove("hidden")
 
   } else if (blue.includes('0') && blue.includes('4') && blue.includes('8')) {
     console.log("Blue wins!")
@@ -164,6 +180,7 @@ function check() {
     blueScore.innerText = blueScoreCount += 1
     blueWins.classList.remove("hidden")
     gameEnd.classList.add("gameEnd")
+    playAgain.classList.remove("hidden")
 
   } else if (blue.includes('2') && blue.includes('4') && blue.includes('6')) {
     console.log("Blue wins!")
@@ -171,6 +188,7 @@ function check() {
     blueScore.innerText = blueScoreCount += 1
     blueWins.classList.remove("hidden")
     gameEnd.classList.add("gameEnd")
+    playAgain.classList.remove("hidden")
   }
 }
 
@@ -190,5 +208,25 @@ button.addEventListener("click", () => {
   blueWins.classList.add("hidden")
   tie.classList.add("hidden")
   gameEnd.classList.remove("gameEnd")
+  playAgain.classList.add("hidden")
+  console.log("New game, red's turn!")
+})
+
+playAgain.addEventListener("click", () => {
+  sections.forEach(section => {
+    section.classList.remove("red")
+    section.classList.remove("blue")
+    section.classList.remove("noClick")
+    section.innerText = ''
+    count = 1
+    win = 0
+    red = []
+    blue = []
+  })
+  redWins.classList.add("hidden")
+  blueWins.classList.add("hidden")
+  tie.classList.add("hidden")
+  gameEnd.classList.remove("gameEnd")
+  playAgain.classList.add("hidden")
   console.log("New game, red's turn!")
 })
