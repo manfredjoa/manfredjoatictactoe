@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Russo One', sans-serif;
+  color: lawngreen;
+}
+
+body {
+  background-color: black;
+}
+
+h1 {
+  font-size: 45px;
+}
+
+.redFirst {
+  margin-top: -25px;
+}
+
+body {
+  height: 100%;
+  text-align: center;
+}
+
+.outerDiv {
+  display: flex;
+}
+
+.innerDiv {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  height: 500px;
+  width: 500px;
+  gap: 10px;
+  margin: 0 auto;
+}
+
+section {
+  cursor: pointer;
+  border: 1px solid lawngreen;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  margin-top: 20px;
+  background-color: black;
+  border: 1px solid lawngreen;
+  cursor: pointer;
+}
+
+.paragraphDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  font-size: 50px;
+}
+
+.red {
+  background-color: rgb(100, 0, 0);
+  font-size: 100px;
+}
+
+.blue {
+  background-color: rgb(0, 0, 100);
+  font-size: 100px;
+}
+
+.noClick {
+  pointer-events: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.gameEnd {
+  z-index: 1;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, .5);
+  backdrop-filter: blur(5px);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 40px;
+  font-size: 100px;
+}

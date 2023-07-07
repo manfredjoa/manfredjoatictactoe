@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TIC-TAC-TOE</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <h1>T I C - T A C - T O E</h1>
+  <p class="redFirst">Red goes first!</p>
+
+  <div class="outerDiv">
+
+    <div class="paragraphDiv">
+      <p>RED</p>
+      <p class="score" id="redScore">0</p>
+    </div>
+
+    <div class="innerDiv">
+      <section data-number="0"></section>
+      <section data-number="1"></section>
+      <section data-number="2"></section>
+      <section data-number="3"></section>
+      <section data-number="4"></section>
+      <section data-number="5"></section>
+      <section data-number="6"></section>
+      <section data-number="7"></section>
+      <section data-number="8"></section>
+    </div>
+
+    <div class="paragraphDiv">
+      <p>BLUE</p>
+      <p class="score" id="blueScore">0</p>
+    </div>
+
+  </div>
+
+  <div id="gameEnd">
+    <p class="hidden" id="redWins">RED WINS!</p>
+    <p class="hidden" id="blueWins">BLUE WINS!</p>
+    <p class="hidden" id="tie">TIE!</p>
+  </div>
+
+  <button>PLAY AGAIN</button>
+
+</body>
+
+</html>
